@@ -14,8 +14,7 @@ internal sealed class PersistentStorageMiddleware(IBrowserStorage browserStorage
 
     public override async Task InitializeAsync(IDispatcher dispatcher, IStore store)
     {
-        IEnumerable<IFeature> features = store.Features.Values;
-        foreach (IFeature feature in features)
+        foreach (IFeature feature in store.Features.Values)
         {
             feature.StateChanged += FeatureStateHasChanged;
             object? featureState = await _browserStorage.LoadAsync(feature.GetName(), feature.GetStateType());

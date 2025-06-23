@@ -27,8 +27,9 @@ using Fluxor.Blazor.Web.Persist;
 ```csharp
 builder.Services.AddFluxor(options => 
 {
-	options.ScanAssemblies(typeof(Program).Assembly);
-	options.UsePersistentStorage();
+	options
+		.ScanAssemblies(typeof(Program).Assembly)
+		.UsePersistentStorage(options => options.PersistenceKey = "Fluxor.Blazor.Web.Persist");
 });
 ```
 
