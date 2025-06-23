@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Fluxor.Blazor.Web.Persist/bin
+/Fluxor.Blazor.Web.Persist/obj
+/nuget-publish-command.md
